@@ -8,9 +8,25 @@
     </div>
   </div>
   <hr />
-  <div  ng-controller="empCtrl as emps">
+  <div ng-controller="empCtrl as emps">
     <div ng-repeat="emp in emps.emps">
       {{emp.empId}}-{{emp.name}}-{{emp.lastName}}
+    </div>
+  </div>
+  <hr />
+  <div ng-controller="cityCtrl as city">
+    <div ng-repeat="city in city.cities">
+      {{city}}
+    </div>
+  </div>
+  <hr />
+  <div ng-controller="dogCtrl as dog">
+    {{dog.myDog.name}}-{{dog.myDog.walk()}}
+  </div>
+  <hr />
+  <div ng-controller="companyCtrl as cmp">
+    <div ng-repeat="cmp in cmp.companyDetail">
+      {{cmp.name}} - {{cmp.description}}
     </div>
   </div>
 </body>
@@ -19,5 +35,8 @@
 <script src="app.js"></script>
 <script src="user/userController.js"></script>
 <script src="emp/empController.js"></script>
+<script src="city/cityController.js"></script>
+<script src="animal/dogController.js"></script>
+<script src="company/companyController.js"></script>
 
 </html>
